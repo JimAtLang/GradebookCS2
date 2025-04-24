@@ -32,7 +32,6 @@ student_name = 'Jesus Ramirez'
 
 print(student_name)
 time.sleep(1)
-print(f'\nCurrent Average: {(((sum(names_a.values())) / len(names_a)) * (aw/(aw+bw+cw+dw)) * 100) }n')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
 print(f'Section       Weighting     Pts Earned    Max Pts       Average')
