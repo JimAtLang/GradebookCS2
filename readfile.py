@@ -1,4 +1,3 @@
-with open('Algebra 1', 'r') as file:
+with open("data\\Algebra 1") as file:
     lines = file.readlines()
-for line in lines
-    print(line.strip())
+    print(lines[1])
