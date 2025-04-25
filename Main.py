@@ -1,4 +1,11 @@
 import random
+import math
+for i in len(gradesandtype):
+    if i % 2 == 0:
+        checkedtype = gradesandtype[i]
+    else:
+        checkedthing = gradesandtype[i]
+    if i >= 2:
 if checkedthing == "NTI":
     gradeforcheck = random.randint(1,100)
     if gradeforcheck >= 80:
