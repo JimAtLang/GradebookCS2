@@ -37,21 +37,21 @@ time.sleep(2)
 print(f'Section       Weighting     Pts Earned    Max Pts       Average')
 time.sleep(0.5)
 
-def print_section(section_name, section_weight, section_grades):
-    line = section_name
-    while len(line) != 14:
-        line += ' '
-    line += f'{(section_weight / (aw + bw + cw + dw)) * 100:.2f}%'
-    while len(line) != 28:
-        line += ' '
-    line += f'{sum(section_grades.values()):.2f}'
-    while len(line) != 42:
-        line += ' '
-    line += f'{len(section_grades) * 100:.2f}'
-    while len(line) != 56:
-        line += ' '
-    line += f'{sum(section_grades.values()) / len(section_grades):.2f}'
-    print(line)
+def print_section(n, w, g): # name, weighting, grades
+    l = n # First thing is the name
+    while len(l) != 14:
+        l += ' ' # Even spacing
+    l += f'{(w / (aw + bw + cw + dw)) * 100:.2f}%' # Weighting as a %
+    while len(l) != 28:
+        l += ' ' # Even spacing, the sequel
+    l += f'{sum(g.values()):.2f}' # Points earned
+    while len(l) != 42:
+        l += ' ' # Even spacing, the sequel, the sequel
+    l += f'{len(g) * 100:.2f}' # Points possible
+    while len(l) != 56:
+        l += ' ' # Even spacing, the sequel, the sequel, the sequel
+    l += f'{sum(g.values()) / len(g):.2f}' # The average
+    print(l) # Looks just like veracross
 
 print_section(a, aw, names_a)
 time.sleep(0.5)
