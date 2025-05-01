@@ -1,6 +1,6 @@
 import random
 import math
-def gradeweight(checkedthing,checkedtype):
+def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
     if checkedthing == "NTI":
         gradeforcheck = random.randint(1,100)
         if gradeforcheck >= 80:
