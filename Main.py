@@ -1,8 +1,10 @@
 import time
 import random
 
+avg = 0
+
 a = 'Classwork'
-aw = 6
+aw = 999
 b = 'Homework'
 bw = 1
 c = 'Tests'
@@ -29,6 +31,22 @@ names_d = {
 }
 
 student_name = 'Jesus Ramirez'
+
+def nto4(n):
+    if n < 60:
+        return 1
+    if n < 63:
+        return 1.1
+    if n < 66:
+        return 1.2
+    if n < 69:
+        return 1.3
+    # shit i don't know how the grading scheme works
+
+def w(g, h):
+    avgb = avg
+    avgb += sum(g.values()) / len(g) * (h / (aw + bw + cw + dw)) * 100
+    avg = avgb
 
 print(student_name)
 time.sleep(1)
