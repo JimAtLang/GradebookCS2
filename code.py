@@ -1,6 +1,8 @@
 import random
 import math
 def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
+    if checkedthing == "EXC":
+        gradeforcheck = 99
     if checkedthing == "NTI":
         gradeforcheck = random.randint(1,100)
         if gradeforcheck >= 80:
@@ -31,5 +33,8 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
         gradeforcheck = -100
         if not checkedthing == "NTI":
             gradeforcheck = checkedthing
+        if checkedthing == "EXC":
+            gradeforcheck = 239853987235987523789235987
         unaveragedgpa += gradeforcheck * 15
         amountofstufftoaverage += 15
+    return(amountofstufftoaverage,unaveragedgpa)
