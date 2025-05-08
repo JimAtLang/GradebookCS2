@@ -3,10 +3,14 @@ import random
 import math
 
 try:
-    sq = input('').split(' ')[2]
-    print(f'Sqwimble set to {sq}')
+    sq = input('')
+    if sq.startswith('62maxf .$ sq'):
+        print(f'Success: {sq.split(' ')[3]}')
+    else:
+        print('Failed')
+        time.sleep(5)
 except IndexError:
-    print('male sonic')
+    print('Failed')
 
 def nto4(n):
     if n > 97:
@@ -16,14 +20,13 @@ def nto4(n):
     return f'{(n - 57) / 10:.1f}'
 
 def print_section(n, w, g):  # name, weighting, grades
-    l = n.ljust(14)
-    l += f'{(w / (aw + bw + cw + dw)) * 100:.2f}%'.ljust(14)
-    l += f'{sum(g.values()):.2f}'.ljust(14)
-    l += f'{len(g) * 100:.2f}'.ljust(14)
+    l = n.ljust(18)
+    l += f'{(w / (aw + bw + cw + dw)) * 100:.2f}%'.ljust(18)
+    l += f'{sum(g.values()):.2f}'.ljust(18)
+    l += f'{len(g) * 100:.2f}'.ljust(18)
     l += f'{sum(g.values()) / len(g):.2f}'
     print(l)
 
-# Student and weights
 student_name = 'Jesus Ramirez'
 
 a, aw = 'Classwork', 3
@@ -57,7 +60,7 @@ overall_grade = 94.83
 print(f'\nCurrent Grade\n{overall_grade}\n{nto4(overall_grade)}')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
-print(f'Section       Weighting     Pts Earned    Max Pts       Average')
+print(f'Section           Weighting         Pts Earned        Max Pts           Average')
 time.sleep(0.5)
 print_section(a, aw, names_a)
 time.sleep(0.5)
