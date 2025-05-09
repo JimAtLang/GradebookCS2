@@ -21,7 +21,7 @@ def nto4(n):
 
 def print_section(n, w, g):  # name, weighting, grades
     l = n.ljust(18)
-    l += f'{(w / (aw + bw + cw + dw)) * 100:.2f}%'.ljust(18)
+    l += f'{(w / (aw + bw + cw + dw + ew)) * 100:.2f}%'.ljust(18)
     l += f'{sum(g.values()):.2f}'.ljust(18)
     l += f'{len(g) * 100:.2f}'.ljust(18)
     l += f'{sum(g.values()) / len(g):.2f}'
@@ -29,10 +29,11 @@ def print_section(n, w, g):  # name, weighting, grades
 
 student_name = 'Jesus Ramirez'
 
-a, aw = 'Classwork', 3
-b, bw = 'Homework', 1
+a, aw = 'Quiz', 3
+b, bw = 'HW', 1
 c, cw = 'Tests', 3
 d, dw = 'Final', 3
+e, ew = 'Project', 3
 
 # Grade dictionaries
 names_a = {
@@ -52,6 +53,10 @@ names_c = {
 names_d = {
     'Final': 91.33
 }
+names_e = {
+    'Quiz1': 100,
+    'Quiz2': 95
+}
 
 # Output
 print(student_name)
@@ -69,3 +74,5 @@ time.sleep(0.5)
 print_section(c, cw, names_c)
 time.sleep(0.5)
 print_section(d, dw, names_d)
+time.sleep(0.5)
+print_section(e, ew, names_e)
