@@ -2,6 +2,8 @@ import time
 import random
 import math
 
+from wholemilk import print_section
+
 try:
     sq = input('')
     if sq.startswith('62maxf .$ sq'):
