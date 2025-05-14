@@ -3,6 +3,7 @@ import random
 import math
 
 from wholemilk import print_section
+from wholemilk import nto4
 
 try:
     sq = input('')
