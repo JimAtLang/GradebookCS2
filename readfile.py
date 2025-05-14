@@ -1,10 +1,13 @@
-def readfile(filename, )
+def readfile(filename):
+    grades = []
+    headers = []
     with open("data\\"+filename) as file:
         lines = file.readlines()
         print(lines)
-        gerbilbone = "ifyourreadingthisiminyourwalls"
-        print(gerbilbone)
+        headers = lines[0].split(",")
         for line in lines:
-            gerbilbone = line.split(",")
-
-
+            bleed = line.split(",")
+            if bleed[0]=="Name":
+                continue
+            current_grade = {}
+            for item in bleed:
