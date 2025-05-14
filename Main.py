@@ -17,11 +17,52 @@ except IndexError:
 
 student_name = 'Jesus Ramirez'
 
-a, aw = 'Quiz', 3
+a, aw = 'Quiz', 4
 b, bw = 'HW', 1
-c, cw = 'Tests', 3
-d, dw = 'Final', 3
-e, ew = 'Project', 3
+c, cw = 'Tests', 6
+d, dw = 'Project', 10
+e, ew = 'Final', 15
+
+def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
+    if checkedthing == "EXC":
+        gradeforcheck = 99
+    if checkedthing == "NTI":
+        gradeforcheck = random.randint(1,100)
+        if gradeforcheck >= 80:
+            gradeforcheck = random.randint(1, 100)
+        if gradeforcheck >= 65:
+            gradeforcheck = random.randint(1, 100)
+    if checkedtype.startswith(a):
+        if not checkedthing == "NTI":
+            gradeforcheck = checkedthing
+        unaveragedgpa += gradeforcheck * aw
+        amountofstufftoaverage += aw
+    if checkedtype.startswith(b):
+        if not checkedthing == "NTI":
+            gradeforcheck = checkedthing
+        unaveragedgpa += gradeforcheck
+        amountofstufftoaverage += bw
+    if checkedtype.startswith(c):
+        if not checkedthing == "NTI":
+            gradeforcheck = checkedthing
+        unaveragedgpa += gradeforcheck * cw
+        amountofstufftoaverage += cw
+    if checkedtype.startswith(d):
+        if not checkedthing == "NTI":
+            gradeforcheck = checkedthing
+        unaveragedgpa += gradeforcheck * dw
+        amountofstufftoaverage += dw
+    if checkedtype.startswith(e):
+        gradeforcheck = -100
+        if not checkedthing == "NTI":
+            gradeforcheck = checkedthing
+        if checkedthing == "EXC":
+            gradeforcheck = 239853987235987523789235987
+        unaveragedgpa += gradeforcheck * ew
+        amountofstufftoaverage += ew
+    return(amountofstufftoaverage,unaveragedgpa)
+
+
 
 # Grade dictionaries
 names_a = {
@@ -45,6 +86,21 @@ names_e = {
     'Quiz1': 100,
     'Quiz2': 95
 }
+
+def print_section(n, w, g):  # name, weighting, grades
+    l = n.ljust(18)
+    l += f'{(w / (aw + bw + cw + dw + ew)) * 100:.2f}%'.ljust(18)
+    l += f'{sum(g.values()):.2f}'.ljust(18)
+    l += f'{len(g) * 100:.2f}'.ljust(18)
+    l += f'{sum(g.values()) / len(g):.2f}'
+    print(l)
+
+def nto4(n):
+    if n > 97:
+        return 4.0
+    if n < 57:
+        return 1.0
+    return f'{(n - 57) / 10:.1f}'
 
 # Output
 print(student_name)
