@@ -14,13 +14,6 @@ try:
 except IndexError:
     print('Failed')
 
-def nto4(n):
-    if n > 97:
-        return 4.0
-    if n < 57:
-        return 1.0
-    return f'{(n - 57) / 10:.1f}'
-
 student_name = 'Jesus Ramirez'
 
 a, aw = 'Quiz', 3
