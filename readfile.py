@@ -1,3 +1,6 @@
+from quopri import EMPTYSTRING
+
+
 def readfile(filename):
     grades = []
     headers = []
@@ -9,5 +12,16 @@ def readfile(filename):
             bleed = line.split(",")
             if bleed[0]=="Name":
                 continue
-            current_grade = {}
-            for item in bleed:
+            WhoseGradesAreThese = bleed.pop(0)
+            HWGrades = [bleed.pop()]
+            for i in range(9):
+                HWGrades.append(bleed.pop())
+            ProjectGrades = [bleed.pop()]
+            ProjectGrades.append(bleed.pop())
+            QuizGrades = [bleed.pop()]
+            for i in range(3):
+                QuizGrades.append(bleed.pop())
+            TestGrades = [bleed.pop()]
+            TestGrades.append(bleed.pop())
+            FinalGrade = [bleed.pop()]
+
