@@ -24,4 +24,4 @@ def readfile(filename):
             TestGrades = [bleed.pop()]
             TestGrades.append(bleed.pop())
             FinalGrade = [bleed.pop()]
-
+            return WhoseGradesAreThese, HWGrades, ProjectGrades, QuizGrades, TestGrades, FinalGrade
