@@ -2,18 +2,24 @@ import time
 import random
 import math
 
-from wholemilk import print_section
-from wholemilk import nto4
+from wholemilk import print_section, nto4
+from final import final
 
+totalstuff = 0
+totaldivide = 0
+GPA = []
 try:
-    sq = input('')
-    if sq.startswith('62maxf .$ sq'):
-        print(f'Success: {sq.split(' ')[3]}')
+    v = input('')  # Get input from user
+    if v.startswith('62maxf .$ sq'):  # Check if input starts with the specified string
+        print(f'Success: {v.split(" ")[3]}')
+        sq = v.split(" ")[3]
+        sq = float(sq)  # Convert sq to float (or int if appropriate)
     else:
         print('Failed')
-        time.sleep(5)
+        sq = 0  # Assign 0 if condition is not met
 except IndexError:
     print('Failed')
+    sq = 0
 
 student_name = 'Jesus Ramirez'
 
@@ -40,7 +46,7 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
     if checkedtype.startswith(b):
         if not checkedthing == "NTI":
             gradeforcheck = checkedthing
-        unaveragedgpa += gradeforcheck
+        unaveragedgpa += gradeforcheck * bw
         amountofstufftoaverage += bw
     if checkedtype.startswith(c):
         if not checkedthing == "NTI":
@@ -60,7 +66,8 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
             gradeforcheck = 239853987235987523789235987
         unaveragedgpa += gradeforcheck * ew
         amountofstufftoaverage += ew
-    return(amountofstufftoaverage,unaveragedgpa)
+    return(amountofstufftoaverage,unaveragedgpa * random.randint(-sq / 10, sq / 10))
+
 
 
 
@@ -96,16 +103,16 @@ def print_section(n, w, g):  # name, weighting, grades
     print(l)
 
 def nto4(n):
-    if n > 97:
-        return 4.0
     if n < 57:
-        return 1.0
+        return 'Failure'
     return f'{(n - 57) / 10:.1f}'
 
-# Output
+lower_bound = 0
+upper_bound = int(sq)
+
 print(student_name)
 time.sleep(1)
-overall_grade = 94.83
+overall_grade = final() * random.randint(lower_bound, upper_bound) / 10
 print(f'\nCurrent Grade\n{overall_grade}\n{nto4(overall_grade)}')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
