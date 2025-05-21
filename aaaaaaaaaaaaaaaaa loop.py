@@ -12,6 +12,7 @@ def finalfinal(gradelistlist):
         for i in range(20):
             gradeweight((gradelistlist[f])[i],types[i],totalgrade,denominator)
         GPALIST[f] = totalgrade/denominator
+    return GPALIST
         #listofgrades is a list of strings and integers
         #listoftypes is a list of strings
         #will need separate vars for each person, this is just one person.
