@@ -8,18 +8,6 @@ from final import final
 totalstuff = 0
 totaldivide = 0
 GPA = []
-try:
-    v = input('')  # Get input from user
-    if v.startswith('62maxf .$ sq'):  # Check if input starts with the specified string
-        print(f'Success: {v.split(" ")[3]}')
-        sq = v.split(" ")[3]
-        sq = float(sq)  # Convert sq to float (or int if appropriate)
-    else:
-        print('Failed')
-        sq = 0  # Assign 0 if condition is not met
-except IndexError:
-    print('Failed')
-    sq = 0
 
 student_name = 'Jesus Ramirez'
 
@@ -107,12 +95,9 @@ def nto4(n):
         return 'Failure'
     return f'{(n - 57) / 10:.1f}'
 
-lower_bound = 0
-upper_bound = int(sq)
-
 print(student_name)
 time.sleep(1)
-overall_grade = final() * random.randint(lower_bound, upper_bound) / 10
+overall_grade = final()
 print(f'\nCurrent Grade\n{overall_grade}\n{nto4(overall_grade)}')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
