@@ -12,16 +12,6 @@ def readfile(filename):
             bleed = line.split(",")
             if bleed[0]=="Name":
                 continue
-            WhoseGradesAreThese = bleed.pop(0)
-            HWGrades = [bleed.pop()]
-            for i in range(9):
-                HWGrades.append(bleed.pop())
-            ProjectGrades = [bleed.pop()]
-            ProjectGrades.append(bleed.pop())
-            QuizGrades = [bleed.pop()]
-            for i in range(3):
-                QuizGrades.append(bleed.pop())
-            TestGrades = [bleed.pop()]
-            TestGrades.append(bleed.pop())
-            FinalGrade = [bleed.pop()]
-            return WhoseGradesAreThese, HWGrades, ProjectGrades, QuizGrades, TestGrades, FinalGrade
+            Grades = [bleed.pop()]
+            for i in range(19):
+                Grades.append(bleed.pop())
