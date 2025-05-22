@@ -2,6 +2,7 @@ import random
 import math
 def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
     if not checkedtype == "Name":
+        checkedthing = checkedthing.strip()
         if checkedthing.isnumeric() == True:
             checkedthing = int(checkedthing)
         if checkedthing == "EXC":
