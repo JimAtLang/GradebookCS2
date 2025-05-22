@@ -95,20 +95,25 @@ def nto4(n):
         return 'Failure'
     return f'{(n - 57) / 10:.1f}'
 
+t = 10
+
 print(student_name)
 time.sleep(1)
-overall_grade = final()
+overall_grade = 20
 print(f'\nCurrent Grade\n{overall_grade}\n{nto4(overall_grade)}')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
-print(f'Section           Weighting         Pts Earned        Max Pts           Average')
-time.sleep(0.5)
-print_section(a, aw, names_a)
-time.sleep(0.5)
-print_section(b, bw, names_b)
-time.sleep(0.5)
-print_section(c, cw, names_c)
-time.sleep(0.5)
-print_section(d, dw, names_d)
-time.sleep(0.5)
-print_section(e, ew, names_e)
+while True:
+    print(f'Section           Weighting         Pts Earned        Max Pts           Average')
+    time.sleep(t)
+    print_section(a, aw, names_a)
+    time.sleep(t)
+    print_section(b, bw, names_b)
+    time.sleep(t)
+    print_section(c, cw, names_c)
+    time.sleep(t)
+    print_section(d, dw, names_d)
+    time.sleep(t)
+    print_section(e, ew, names_e)
+    t -= 0.1
+    print(f'{t:.1f}')
