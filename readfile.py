@@ -2,11 +2,9 @@ from quopri import EMPTYSTRING
 
 
 def readfile(filename):
-    grades = []
-    headers = []
+    trololololol = []
     with open("data\\"+filename) as file:
         lines = file.readlines()
-        print(lines)
         headers = lines[0].split(",")
         for line in lines:
             bleed = line.split(",")
@@ -15,3 +13,5 @@ def readfile(filename):
             Grades = [bleed.pop()]
             for i in range(19):
                 Grades.append(bleed.pop())
+            trololololol.append(Grades)
+    return trololololol
