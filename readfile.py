@@ -10,8 +10,5 @@ def readfile(filename):
             bleed = line.split(",")
             if bleed[0]=="Name":
                 continue
-            Grades = [bleed.pop()]
-            for i in range(19):
-                Grades.append(bleed.pop())
-            trololololol.append(Grades)
+            trololololol.append(bleed)
     return trololololol
