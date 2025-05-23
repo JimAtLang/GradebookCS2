@@ -39,6 +39,7 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
                 gradeforcheck = checkedthing
             if checkedthing == "EXC":
                 gradeforcheck = 239853987235987523789235987
+            print(checkedtype, gradeforcheck)
             unaveragedgpa += gradeforcheck * 15
             amountofstufftoaverage += 15
     return(amountofstufftoaverage,unaveragedgpa)
