@@ -7,12 +7,14 @@ types = ["Name","HW1","HW2","HW3","HW4","HW5","HW6","HW7","HW8","HW9","HW10","Pr
 ]
 grades = []
 def finalfinal(gradelistlist):
+    print(gradelistlist)
     GPALIST = []
     totalgrade = 0
     denominator = 0
     for f in range(104):
         GPALIST.append(gradelistlist[f][0])
         for i in range(20):
+            print(f, i, (gradelistlist[f])[i], types[i], totalgrade, denominator)
             gradeweight((gradelistlist[f])[i],types[i],totalgrade,denominator)
         GPALIST[f] = totalgrade/denominator
     return GPALIST
