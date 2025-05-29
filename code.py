@@ -38,8 +38,7 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
             if not checkedthing == "NTI" and not checkedthing == "EXC":
                 gradeforcheck = checkedthing
             if checkedthing == "EXC":
-                gradeforcheck = 239853987235987523789235987
-            print(checkedtype, gradeforcheck)
+                gradeforcheck = 100
             unaveragedgpa += gradeforcheck * 15
             amountofstufftoaverage += 15
     return(amountofstufftoaverage,unaveragedgpa)
