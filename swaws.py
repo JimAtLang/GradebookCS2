@@ -14,7 +14,7 @@ def finalfinal(gradelistlist,lengthoffile):
         GPALIST.append(gradelistlist[f][0])
         for i in range(20):
             (totalgrade,denominator) = gradeweight((gradelistlist[f])[i],types[i],totalgrade,denominator)
-        GPALIST[f] = 100 * totalgrade/denominator
+        GPALIST[f] = (gradelistlist[f][0],100 * totalgrade/denominator,)
     return GPALIST
 grades = finalfinal(readfile("Algebra 1"),103)
 print(grades)
