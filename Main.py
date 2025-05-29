@@ -90,6 +90,10 @@ def print_section(n, w, g):  # name, weighting, grades
     l += f'{sum(g.values()) / len(g):.2f}'
     print(l)
 
+def print_w(n, g):
+    r = n.ljust(10)
+    r += f'{g[1]}'
+
 def nto4(n):
     if n < 57:
         return 'Failure'
@@ -99,7 +103,7 @@ t = 0.3
 
 print(student_name)
 time.sleep(1)
-overall_grade = 20
+overall_grade = 80
 print(f'\nCurrent Grade\n{overall_grade}\n{nto4(overall_grade)}')
 print(f'\nGrade Detail\n----------')
 time.sleep(2)
@@ -114,3 +118,4 @@ time.sleep(t)
 print_section(d, dw, names_d)
 time.sleep(t)
 print_section(e, ew, names_e)
+time.sleep(t)
