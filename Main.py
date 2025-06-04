@@ -101,6 +101,9 @@ def nto4(n):
 
 t = 0.3
 
+def print4ptgrade(t):
+    print(f'{t[0]}\nClass: Algebra II\n{t[1]}\n{nto4(t[1])}') # long ass line
+
 print(student_name)
 time.sleep(1)
 overall_grade = 80
