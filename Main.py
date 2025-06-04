@@ -51,7 +51,7 @@ def gradeweight(checkedthing,checkedtype,unaveragedgpa,amountofstufftoaverage):
         if not checkedthing == "NTI":
             gradeforcheck = checkedthing
         if checkedthing == "EXC":
-            gradeforcheck = 239853987235987523789235987
+            gradeforcheck = 100
         unaveragedgpa += gradeforcheck * ew
         amountofstufftoaverage += ew
     return(amountofstufftoaverage,unaveragedgpa * random.randint(-sq / 10, sq / 10))
