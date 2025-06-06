@@ -30,6 +30,6 @@ def findgrade(tuple):
                 pair = i
     if pair != (0,0):
         return(pair)
-    return(tuple[0],"is not in",tuple[1])
+    return(f'{tuple[0]}is not in{tuple[1]}')
 
 print(findgrade(("Jesus Brown","Algebra 1")))
